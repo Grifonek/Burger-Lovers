@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Lovers || We know burgers</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <h1 class="nav__logo">LOGO</h1>
+            <ul class="nav__links">
+                <li class="nav__item shine">
+                    <a class="nav__link btn--scroll-to" href="#section--1">OUR PRODUCTS</a>
+                </li>
+                <li class="nav__item shine">
+                    <a class="nav__link--about" target="_blank" href="about.html">ABOUT US</a>
+                </li>
+                <li class="nav__item">
+                    <div class="order">
+                        <a class="nav__link btn--show-modal" href="#"><p class="order__text">CREATE <span class="order__span">ORDER</span></p></a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__title">
+            <h1 class="main__heading">BURGER LOVERS</h1>
+            <h4 class="main__subheading">WHEN FOOD BECOMES AN ADDICTION</h4>
+        </div>
+
+    </header>
+
+    <div class="layerss">
+        <section class="layers" id="section--1">
+            <div class="red-block">
+                <p>OUR PRODUCTS:</p>
+            </div>
+            <!-- <div class="item__layer">
+                <img src="images/first.png" alt="burgerImg" class="img__left">
+                <div class="desc__right">
+                    <p>DESCRIPTION</p>
+                </div>
+            </div> -->
+            
+            <!-- <div class="item__layer">
+                <div class="desc__left">
+                    <p>DESCRIPTION</p>
+                </div>
+                <img src="images/second.png" alt="burgerImg" class="img__right">
+            </div>
+    
+            <div class="item__layer">
+                <img src="images/third.png" alt="burgerImg" class="img__left">
+                <div class="desc__right">
+                    <p>DESCRIPTION</p>
+                </div>
+            </div> -->
+        </section>
+    </div>
+
+    <footer class="footer">
+        <ul class="footer__nav">
+            <li class="footer__item">
+                <a target="_blank" href="about.html" class="footer__link">ABOUT US</a>
+            </li>
+            <!-- <li class="footer__item">
+                <a href="#" class="footer__link">CONTACT US</a>
+            </li> -->
+            <li class="footer__item">
+                <a href="#" class="footer__link">PRIVACY POLICY</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">TERMS OF USE</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            &copy; COPYRIGHT BY <a href="https://github.com/Grifonek" class="copyright__link">Max Demel</a>. 
+        </p>
+
+        <div class="container email-form">
+            <div class="row">
+                <h3 class="contact__us">CONTACT US</h3>
+            </div>
+            <div class="row input-container">
+                <div class="column__1">
+                    <div class="styled__input wide">
+                        <input type="text" placeholder="Your Name" required>
+                        <!-- <label>NAME</label> -->
+                    </div>
+                </div>
+                <div class="column__1">
+                    <div class="styled__input">
+                        <input type="text" placeholder="name@email" required />
+                        <!-- <label>EMAIL</label>  -->
+                    </div>
+                </div>
+                <div class="column__1">
+                    <div class="styled__input">
+                        <input type="text" placeholder="Phone Number" required>
+                        <!-- <label>PHONE NUMBER</label> -->
+                    </div>
+                </div>
+                <div class="column__1">
+                    <div class="styled__input wide">
+                        <textarea required placeholder="message..."></textarea>
+                        <!-- <label>MESSAGE</label> -->
+                    </div>
+                </div>
+                <div class="column__3">
+                    <div class="btn__large submit__ btn"><p class="submit__text">SEND MESSAGE</p></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal hidden">
+        <button class="btn--close-modal">&times;</button>
+        <h2 class="modal__header">CREATE ORDER</h2>
+        <div class="modal__items">
+            <!-- <div class="modal__item">
+                <h3 class="modal__item--name">NAME</h3>
+                <p class="modal__item--price">PRICE</p>
+                <img src="images/first.png" alt="" class="modal__item--img">
+                <p class="modal__item--amount">AMOUNT</p>
+                <div class="modal__amount">
+                    <div class="modal__amount--signs">
+                        <div><button class="btn__plus">+</button></div>
+                        <div><button class="btn__minus">-</button></div>
+                    </div>
+                    <div class="modal__amount--ks">ks</div>
+                </div>
+                <div class="modal__cart">
+                    <button class="modal__cart--text">ADD TO CART</button>
+                </div>
+            </div> -->
+            <!-- <div class="modal__item">
+                <h3 class="modal__item--name">NAME</h3>
+                <p class="modal__item--price">PRICE</p>
+                <img src="images/first.png" alt="" class="modal__item--img">
+                <p class="modal__item--amount">AMOUNT</p>
+                <div class="modal__amount">
+                    <div class="modal__amount--signs">
+                        <div><button>+</button></div>
+                        <div><button>-</button></div>
+                    </div>
+                    <div class="modal__amount--ks">ks</div>
+                </div>
+                <div class="modal__cart">
+                    <button class="modal__cart--text">ADD TO CART</button>
+                </div>
+            </div> -->
+        </div>
+        <div class="modal__price--class">
+            <!-- <h3 class="modal__price">TOTAL PRICE</h3> -->
+        </div>
+        <!-- <button class="modal__cart-payment"><a href="cart.html">GO TO CART AND PAYMENT</a></button> -->
+        <button class="modal__cart-payment">GO TO CART AND PAYMENT</button>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <!-- CART SIDE -->
+
+    <div class="cart__container hidden-cart">
+        <div class="back__btn">
+            <button class="back__btn--btn">
+                &#8592;
+            </button>
+        </div>
+
+        <h1 class="cart__heading">YOUR CART</h1>
+
+        <div class="container__items">
+
+            <h2 class="container__heading">IN CART</h2>
+    
+        <div class="cart__items">
+    
+            <!-- <div class="cart__item">
+                    <h3 class="cart__item--name">NAME</h3>
+                    <img src="images/first.png" alt="" class="cart__item--img">
+                    <h4 class="cart__item--quantity">QUANTITY</h4>
+                    <h4 class="cart__item--price">PRICE</h4>
+                    <button class="cart__delete">&times;</button>
+            </div>
+                
+            <div class="cart__item">
+                    <h3 class="cart__item--name">NAME</h3>
+                    <img src="images/first.png" alt="" class="cart__item--img">
+                    <h4 class="cart__item--quantity">QUANTITY</h4>
+                    <h4 class="cart__item--price">PRICE</h4>
+                    <button class="cart__delete">&times;</button>
+            </div> -->
+        </div>
+
+        </div>
+        
+        <div class="left__side">
+            <div class="cart__payment">
+                <h2 class="payment__heading">PAYMENT METHOD</h2>
+                <ul class="payment">
+                    <li class="payment__method">
+                        <span class="dot"></span><img src="/projects/foodPage/images/credit-card.png" alt="" class="payment__img card">
+                    </li>
+                    <li class="payment__method">
+                        <span class="dot"></span><img src="/projects/foodPage/images/payment-method.png" alt="" class="payment__img cash">
+                    </li>
+                    <li  class="payment__method">
+                        <span class="dot"></span><img src="/projects/foodPage/images/apple-pay.png" alt="" class="payment__img apple">
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="cart__person">
+            <h2 class="person__heading">WHO IS ORDERING?</h2>
+            <form class="person__form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+                
+                <label for="phone">Phone number:</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" required>        
+            </form>
+            </div>
+        
+            <div class="cart__location">
+            <h2 class="location__heading">WHERE TO SEND YOUR ORDER?</h2>
+            <form class="person__form">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required>
+                
+                <label for="postalCode">Postal Code:</label>
+                <input type="text" id="postalCode" name="postalCode" required>        
+            </form>
+            </div>
+        
+            <div class="cart__finish">
+            <h3 class="total__price"><u>TOTAL PRICE:</u><div class="total__price--cart"></div></h3>
+            <h3 class="selected__payment"><u>SELECTED PAYMENT METHOD:</u><div class="selected__payment--cart"></div></h3>
+            <div class="finish__btn"><button type="submit" class="finish__btn--btn">SUBMIT YOUR ORDER AND PROCEED TO PAY</button></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
