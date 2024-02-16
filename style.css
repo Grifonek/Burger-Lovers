@@ -185,7 +185,6 @@ body {
 
 .copyright {
     align-self: flex-end;
-    /* margin-right: 30rem; */
 }
 
 /* FOOTER */
@@ -237,7 +236,6 @@ body {
 }
 
 .styled__input label {
-    /* padding:  1rem 30px 1rem 30px; */
     position: absolute;
     pointer-events: none;
 }
@@ -289,8 +287,6 @@ textarea {
 
 /* MODAL */
 .modal {
-    /* top: 50%; */
-    /* left: 8%; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -301,7 +297,6 @@ textarea {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* border: 0.1rem solid red; */
     background: rgb(144,18,24);
     background: linear-gradient(90deg, rgba(144,18,24,1) 0%, rgba(253,29,29,1) 50%, rgba(230,29,79,1) 100%);
     z-index: 999;
@@ -331,7 +326,6 @@ textarea {
 .modal__items {
     display: flex;
     flex-direction: column;
-    /* border: 0.1rem solid black; */
     width: 80rem;
     max-width: 90%;
     background-color: white;
@@ -370,7 +364,7 @@ textarea {
 
 .modal__price--class {
     position: relative;
-    right: -38.5%; /* Adjust as needed */
+    right: -38.5%;
     color: white;
 }
 
@@ -395,7 +389,7 @@ textarea {
 }
 
 .modal__amount button {
-    width: 1rem; /* Set a specific width */
+    width: 1rem;
 }
 
 .modal__amount div {
@@ -764,6 +758,83 @@ textarea {
         transform: translateX(-50%);
         width: 15rem;
         margin-bottom: 1rem;
+    }
+
+    .modal {
+        max-width: 95%;
+    }
+
+    .modal__items {
+        display: flex;
+        flex-direction: column;
+        max-width: 95%;
+    }
+
+    .modal__items {
+        max-width: 90%;
+        padding: 0.5rem;
+        padding-top: 1rem;
+    }
+
+    .modal__item--img {
+        width: 5rem;
+        height: 4rem;
+        margin: 0;
+    }
+
+    .modal__item--amount {
+        display: none;
+    }
+
+    .modal__price {
+        margin-right: 10rem;
+    }
+
+    .modal__amount--ks {
+        margin: 0;
+    }
+
+    .modal__cart {
+        margin: 0;
+    }
+
+    .modal__cart--text {
+        width: 4rem;
+        height: 2rem;
+        font-size: 0.6rem;
+    }
+
+    .modal__item--name {
+        font-size: 1rem;
+    }
+
+    .cart__heading {
+        font-size: 2rem;
+        width: 14rem;
+        margin-left: 5rem;
+        margin-top: 0.5rem;
+    }
+
+    .cart__container {
+        flex-direction: column;
+    }
+
+    .container__items {
+        margin: 0;
+        margin-top: 3rem;
+    }
+
+    .cart__item {
+        width: 85%;
+    }
+
+    .cart__item--name {
+        font-size: 1rem;
+    }
+
+    .left__side {
+        margin-right: 1rem;
+        margin-left: 1rem;
     }
 
 }

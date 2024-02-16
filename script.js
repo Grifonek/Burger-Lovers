@@ -136,7 +136,7 @@ const goToCartAndPayment = function (item) {
       <h3 class="cart__item--name">${item.productName}</h3>
       <img src="images/${item.name}.png" alt="" class="cart__item--img">
       <h4 class="cart__item--quantity">${item.amount}</h4>
-      <h4 class="cart__item--price">${item.subtotal}</h4>
+      <h4 class="cart__item--price">${item.subtotal}$</h4>
       <button class="cart__delete">&times;</button>
     </div>
     `;
