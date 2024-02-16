@@ -249,7 +249,6 @@ input, textarea {
 }
 
 .btn__large {
-    /* float: right; */
     padding: 2rem 3rem;
     border-radius: 60px;
     display: inline-block;
@@ -435,13 +434,6 @@ textarea {
     display: none;
 }
 
-
-/* CART SIDE
-
-/* style.css */
-
-
-
 .back__btn {
     position: absolute;
     left: 1rem;
@@ -612,28 +604,6 @@ textarea {
     border: 1px solid rgb(144, 18, 24);
     font-size: 1rem;
 }
-
-/* .person__form,
-.location__form {
-    display: flex;
-    flex-direction: column;
-}
-
-.person__form label,
-.location__form label {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: rgb(144, 18, 24);
-}
-
-.person__form input,
-.location__form input {
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    border: 1px solid rgb(144, 18, 24);
-    font-size: 1rem;
-} */
 
 .finish__btn {
     text-align: center;
