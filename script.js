@@ -288,7 +288,6 @@ const clearFormInputs = function () {
 
 // Error function
 const errorFunc = function (input) {
-  // let allFilled = false;
   const errorElement = input.parentNode.nextElementSibling;
   if (!errorElement) {
     // Create a new error message element
@@ -304,23 +303,60 @@ const errorFunc = function (input) {
 const finishBtn = document.querySelector(".finish__btn--btn");
 finishBtn.addEventListener("click", function () {
   // Removing all existing error messages
-  const errorMessages = document.querySelectorAll(".error-message");
-  errorMessages.forEach((errorMessage) => errorMessage.remove());
+  clearErrorMessages();
 
   // Checking if all form inputs are filled
   const formInputs = document.querySelectorAll(
     '.person__form input[type="text"]'
   );
   let allFilled = true;
+  const formName = document.querySelector("#name");
+  const formSurname = document.querySelector("#surname");
+  const formPhone = document.querySelector("#phone");
+  const formPhoneVal = formPhone.value;
+  const formEmail = document.querySelector("#email");
+  const formCity = document.querySelector("#city");
+  const formStreet = document.querySelector("#street");
+  const formPostalCode = document.querySelector("#postalCode");
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  const numberRegex = /^\d+$/;
+  const letterRegex = /^[A-Za-z\s]+$/;
 
   formInputs.forEach((input) => {
     if (input.value.trim() === "") {
       allFilled = false;
-      errorFunc(input);
+      displayErrorMessage(input, "This field is required!");
     }
   });
 
-  if (allFilled) {
+  if (
+    formName.value.charAt(0) !== formName.value.charAt(0).toUpperCase() ||
+    formName.value.slice(1) !== formName.value.slice(1).toLowerCase()
+  ) {
+    displayErrorMessage(
+      formName,
+      "Name has to start with upper and continue with lower case letters!"
+    );
+  } else if (
+    formSurname.value.charAt(0) !== formSurname.value.charAt(0).toUpperCase() ||
+    formSurname.value.slice(1) !== formSurname.value.slice(1).toLowerCase()
+  ) {
+    displayErrorMessage(
+      formSurname,
+      "Surname has to start with upper and continue with lower case letters!"
+    );
+  } else if (!/^(\d\s?){3}\d{3}\s?\d{3}$/.test(formPhoneVal)) {
+    displayErrorMessage(formPhone, "Correct phone number format: ### ### ###");
+  } else if (!emailRegex.test(formEmail.value)) {
+    displayErrorMessage(formEmail, "Email address format is incorrect!");
+  } else if (!letterRegex.test(formCity.value)) {
+    displayErrorMessage(formCity, "City name should not contain numbers!");
+  } else if (!numberRegex.test(formPostalCode.value)) {
+    displayErrorMessage(
+      formPostalCode,
+      "Postal code should contain only numbers!"
+    );
+  } else if (allFilled) {
     clearFormInputs();
 
     if (cartItems.length !== 0) {
@@ -335,6 +371,21 @@ finishBtn.addEventListener("click", function () {
     cartItemsElements.forEach((item) => item.remove());
   }
 });
+
+// Displaying error message next to the input field
+function displayErrorMessage(inputField, message) {
+  const errorMessage = document.createElement("div");
+  errorMessage.classList.add("error-message");
+  errorMessage.textContent = message;
+
+  inputField.insertAdjacentElement("afterend", errorMessage);
+}
+
+// Clearing existing error messages
+function clearErrorMessages() {
+  const errorMessages = document.querySelectorAll(".error-message");
+  errorMessages.forEach((message) => message.remove());
+}
 
 // Going to cart after clicking "Go to cart and payment" button
 const cartModal = document.querySelector(".cart__container");
@@ -461,3 +512,5 @@ messageText.addEventListener("click", function () {
 orderBtn.addEventListener("click", showModal);
 closeModalBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+
+// Adding regex to all input forms
